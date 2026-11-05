@@ -1,0 +1,9 @@
+jumlah = int(input("Jumlah mahasiswa: "))
+nilai = []
+
+for i in range(jumlah):
+    n = float(input(f"Nilai mahasiswa ke-{i+1}: "))
+    nilai.append(n)
+
+print("\nDaftar nilai:", nilai)
+print("Rata-rata:", sum(nilai) / jumlah)
