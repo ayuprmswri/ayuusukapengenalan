@@ -1,0 +1,34 @@
+# input
+print("=== Ujian Matematika ===")
+nama = input("Nama : ").strip()
+
+target_nilai= {
+        "andi": 70,
+        "budi": 75,
+        "citra": 80
+}
+
+if nama.lower() not in target_nilai:
+        print("Selamat anda gagal!")
+else:
+    target = target_nilai[nama.lower()]
+    print(f"Target nilai {nama.capitalize()} : {target}")
+    print("-" * 0)
+    
+    percobaan = 0
+    lulus = False
+    
+    while percobaan <3 and not lulus:
+        percobaan += 1
+        nilai = int(input(f"Nilai {percobaan} : "))
+        if nilai >= target:
+            lulus = True
+        else:
+            if percobaan < 3:
+                print("Nilai belum mencapai target, ikuti remedial!")
+                
+        print("-" * 30)
+        if lulus:
+            print(f"{nama.capitalize()} berhasil lulus setelah {3} kali percobaan!")
+        else:
+            print(f"{nama.capitalize()} tidak lulus setelah {3} kali percobaan!")
